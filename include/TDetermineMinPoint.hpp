@@ -5,6 +5,7 @@ class TDetermineMinPoint
 {
 public:
 	static double DichotomyMethod(double (*f)(double), double a, double b, double eps, int itr);
+	static double GoldenSectionMethod(double (*f)(double), double a, double b, double eps, int itr);
 };
 
 #endif

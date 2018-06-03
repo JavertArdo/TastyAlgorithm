@@ -26,9 +26,11 @@ int main()
 
 	// Determine Min Point Test
 	std::cout << TDetermineMinPoint::DichotomyMethod([](double x){ return x*x-1.5*x; }, 0.1, 1.0, 0.00001, 100) << std::endl;
+	std::cout << TDetermineMinPoint::GoldenSectionMethod([](double x){ return x*x-1.5*x; }, 0.1, 1.0, 0.00001, 100) << std::endl;
 
 	// Determine Max Point Test
-	std::cout << TDetermineMaxPoint::DichotomyMethod([](double x){ return -1*x*x+1.5*x; }, 0.1, 1.0, 0.00001, 100) << std::endl;
+	std::cout << TDetermineMaxPoint::DichotomyMethod([](double x){ return -x*x+1.5*x; }, 0.1, 1.0, 0.00001, 100) << std::endl;
+	std::cout << TDetermineMaxPoint::GoldenSectionMethod([](double x){ return -x*x+1.5*x; }, 0.1, 1.0, 0.00001, 100) << std::endl;
 
 	// Extra Test
 	std::cout << TExtra::Factorial(0) << std::endl;
