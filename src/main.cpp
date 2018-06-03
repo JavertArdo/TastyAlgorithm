@@ -34,6 +34,7 @@ int main()
 
 	// Extra Test
 	std::cout << TExtra::Factorial(0) << std::endl;
+	std::cout << TExtra::Fibonacci(8) << std::endl;
 
 	// Polynomial Test
 	double t[] = {2, 3, 4};
