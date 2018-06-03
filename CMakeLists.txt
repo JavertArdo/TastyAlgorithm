@@ -13,8 +13,9 @@ enable_language (CXX)
 set (SOURCE_FILES
 	src/main.cpp
 	src/TConstantValue.cpp
+	src/TDetermineMaxPoint.cpp
+	src/TDetermineMinPoint.cpp
 	src/TDetermineZeroPoint.cpp
-	src/TDetermineExtremePoint.cpp
 	src/TLinearEquation.cpp
 	src/TPolynomial.cpp
 	src/TExtra.cpp

@@ -4,6 +4,8 @@
 #include <vector>
 
 #include "TConstantValue.hpp"
+#include "TDetermineMaxPoint.hpp"
+#include "TDetermineMinPoint.hpp"
 #include "TDetermineZeroPoint.hpp"
 #include "TLinearEquation.hpp"
 #include "TPolynomial.hpp"
@@ -21,6 +23,12 @@ int main()
 	std::cout << TDetermineZeroPoint::SecantMethod([](double x){ return x*x-612; }, 21.5, 32.1, 0.00001, 10) << std::endl;
 	std::cout << TDetermineZeroPoint::NewtonRaphsonMethod([](double x){ return x*x-612; }, [](double x){ return 2*x; }, 1.2, 0.00001, 10) << std::endl;
 	std::cout << TDetermineZeroPoint::FalsiMethod([](double x){ return x*x-612; }, 21.5, 32.1, 0.00001, 10) << std::endl;
+
+	// Determine Min Point Test
+	std::cout << TDetermineMinPoint::DichotomyMethod([](double x){ return x*x-1.5*x; }, 0.1, 1.0, 0.00001, 100) << std::endl;
+
+	// Determine Max Point Test
+	std::cout << TDetermineMaxPoint::DichotomyMethod([](double x){ return -1*x*x+1.5*x; }, 0.1, 1.0, 0.00001, 100) << std::endl;
 
 	// Extra Test
 	std::cout << TExtra::Factorial(0) << std::endl;
