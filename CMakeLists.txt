@@ -20,6 +20,7 @@ set (SOURCE_FILES
 	src/TPolynomial.cpp
 	src/TExtra.cpp
 	src/TFunction.cpp
+	src/TSort.cpp
 )
 
 add_executable (TastyAlgorithm ${SOURCE_FILES})

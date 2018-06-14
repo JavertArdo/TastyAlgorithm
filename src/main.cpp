@@ -11,6 +11,7 @@
 #include "TPolynomial.hpp"
 #include "TExtra.hpp"
 #include "TFunction.hpp"
+#include "TSort.hpp"
 
 int main()
 {
@@ -43,6 +44,11 @@ int main()
 	// Function Test
 	std::cout << "Function(10, x^2-612): " << -512 << ", derivative(10, 20): " << TFunction::Derivative([](double x){ return x*x-612; }, 10) << std::endl;
 	std::cout << "Integral of f(x)=x from 0 to 2: " << TFunction::Integral([](double x){ return x*x+5; }, 0, 2, 10) << std::endl;
+
+	// Sort Test
+	std::vector<double> sort = { 6, 3, 2, 4, 1};
+	TSort::BubbleSort(sort, [](double a, double b){ return a < b; });
+	std::cout << sort[0] << ", " << sort[1] << ", " << sort[2] << ", " << sort[3] << ", " << sort[4] << std::endl;
 
 	//----- UNTESTED -----//
 	//std::vector<double> solved;
