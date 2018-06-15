@@ -57,6 +57,9 @@ int main()
 	std::vector<double> C;
 	C = TMatrix::Add(&A, &B);
 	std::cout << C[0] << ", " << C[1] << ", " << C[2] << ", " << C[3] << ", " << C[4] << ", " << C[5] << ", " << C[6] << ", " << C[7] << ", " << C[8] << std::endl;
+	std::vector<double> D;
+	D = TMatrix::Sub(&A, &B);
+	std::cout << D[0] << ", " << D[1] << ", " << D[2] << ", " << D[3] << ", " << D[4] << ", " << D[5] << ", " << D[6] << ", " << D[7] << ", " << D[8] << std::endl;
 
 	//----- UNTESTED -----//
 	//std::vector<double> solved;
