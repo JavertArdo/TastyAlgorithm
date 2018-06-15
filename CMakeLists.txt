@@ -21,6 +21,7 @@ set (SOURCE_FILES
 	src/TExtra.cpp
 	src/TFunction.cpp
 	src/TSort.cpp
+	src/TMatrix.cpp
 )
 
 add_executable (TastyAlgorithm ${SOURCE_FILES})

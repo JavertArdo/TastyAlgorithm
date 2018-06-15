@@ -12,6 +12,7 @@
 #include "TExtra.hpp"
 #include "TFunction.hpp"
 #include "TSort.hpp"
+#include "TMatrix.hpp"
 
 int main()
 {
@@ -49,6 +50,13 @@ int main()
 	std::vector<double> sort = { 6, 3, 2, 4, 1};
 	TSort::BubbleSort(sort, [](double a, double b){ return a < b; });
 	std::cout << sort[0] << ", " << sort[1] << ", " << sort[2] << ", " << sort[3] << ", " << sort[4] << std::endl;
+
+	// Matrix Test
+	std::vector<double> A = { 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+	std::vector<double> B = { 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+	std::vector<double> C;
+	C = TMatrix::Add(&A, &B);
+	std::cout << C[0] << ", " << C[1] << ", " << C[2] << ", " << C[3] << ", " << C[4] << ", " << C[5] << ", " << C[6] << ", " << C[7] << ", " << C[8] << std::endl;
 
 	//----- UNTESTED -----//
 	//std::vector<double> solved;
