@@ -4,8 +4,8 @@
 class TConstantValue
 {
 public:
-	static double e(int itr=12);
-	static double PI(int itr=1000000);
+	static double e(unsigned int itr=12);
+	static double PI(unsigned int itr=1000000);
 };
 
 #endif

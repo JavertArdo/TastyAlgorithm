@@ -4,8 +4,8 @@
 class TExtra
 {
 public:
-	static int Factorial(int n);
-	static int Fibonacci(int n);
+	static int Factorial(unsigned int n);
+	static int Fibonacci(unsigned int n);
 };
 
 #endif

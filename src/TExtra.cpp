@@ -1,10 +1,10 @@
 #include "TExtra.hpp"
 
-int TExtra::Factorial(int n)
+int TExtra::Factorial(unsigned int n)
 {
 	int sum = 1;
 
-	for (int i=1; i<=n; i++)
+	for (unsigned int i=1; i<=n; i++)
 	{
 		sum *= i;
 	}
@@ -12,16 +12,13 @@ int TExtra::Factorial(int n)
 	return sum;
 }
 
-int TExtra::Fibonacci(int n)
+int TExtra::Fibonacci(unsigned int n)
 {
 	int tab[] = {0, 1};
 
-	if (n == 0)
-	{
+	if (n == 0) {
 		return 0;
-	}
-	else if (n == 1)
-	{
+	} else if (n == 1) {
 		return 1;
 	}
 

@@ -23,3 +23,10 @@ std::vector<double> TMatrix::Sub(std::vector<double>* A, std::vector<double>* B)
 
 	return sub;
 }
+
+std::vector<double> TMatrix::Multiply(std::vector<double>* A, std::vector<double>* B)
+{
+	std::vector<double> mul;
+
+	return mul;
+}

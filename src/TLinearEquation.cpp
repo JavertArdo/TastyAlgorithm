@@ -1,7 +1,14 @@
 #include "TLinearEquation.hpp"
 
-std::vector<double> TLinearEquation::GaussSeidelMethod(std::vector<double> A, std::vector<double> b, int size, double eps, int itr)
+#include <cassert>
+
+std::vector<double> TLinearEquation::GaussSeidelMethod(std::vector<double>* A, std::vector<double>* b, int size, double eps, unsigned int itr)
 {
+	// Check conditions
+	assert(A != nullptr && b != nullptr);
+	assert(eps > 0 && eps < 1);
+
+	/*
 	// Extra arrays
 	std::vector<double> L(size*size);
 	std::vector<double> D(size*size);
@@ -60,5 +67,9 @@ std::vector<double> TLinearEquation::GaussSeidelMethod(std::vector<double> A, st
 		itr--;
 	}
 
+	return x;
+	*/
+
+	std::vector<double> x;
 	return x;
 }

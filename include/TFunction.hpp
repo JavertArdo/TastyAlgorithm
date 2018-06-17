@@ -4,9 +4,9 @@
 class TFunction
 {
 public:
-	static double Function(double (*f)(double), double x);
-	static double Derivative(double (*f)(double), double x);
-	static double Integral(double (*f)(double), double x1, double x2, int itr);
+	static double Function(double (*f)(double x), double x);
+	static double Derivative(double (*f)(double x), double x);
+	static double Integral(double (*f)(double x), double x1, double x2, unsigned int itr);
 };
 
 #endif

@@ -6,7 +6,7 @@
 class TSort
 {
 public:
-	static void BubbleSort(std::vector<double>& tab, bool (*f)(double, double));
+	static void BubbleSort(std::vector<double>& tab, bool (*f)(double a, double b));
 };
 
 #endif

@@ -7,7 +7,7 @@
 class TLinearEquation
 {
 public:
-	static std::vector<double> GaussSeidelMethod(std::vector<double> A, std::vector<double> b, int size, double eps, int itr);
+	static std::vector<double> GaussSeidelMethod(std::vector<double>* A, std::vector<double>* b, int size, double eps, unsigned int itr);
 };
 
 #endif

@@ -1,12 +1,14 @@
 #include "TDetermineZeroPoint.hpp"
 
 #include <math.h>
+#include <cassert>
 
-double TDetermineZeroPoint::BisectionMethod(double (*f)(double), double x1, double x2, double eps, int itr)
+double TDetermineZeroPoint::BisectionMethod(double (*f)(double x), double x1, double x2, double eps, unsigned int itr)
 {
-	if (!(f(x1)*f(x2) < 0)) {
-		return 0;
-	}
+	// Check conditions
+	assert(x1 < x2);
+	assert(eps > 0 && eps < 1);
+	assert(f(x1)*f(x2) < 0);
 
 	while ((std::fabs(x1-x2) > eps) && (itr > 0))
 	{
@@ -26,8 +28,12 @@ double TDetermineZeroPoint::BisectionMethod(double (*f)(double), double x1, doub
 	return (x1+x2)/2.0;
 }
 
-double TDetermineZeroPoint::SecantMethod(double (*f)(double), double x1, double x2, double eps, int itr)
+double TDetermineZeroPoint::SecantMethod(double (*f)(double x), double x1, double x2, double eps, unsigned int itr)
 {
+	// Check conditions
+	assert(x1 < x2);
+	assert(eps > 0 && eps < 1);
+
 	double x0;
 
 	while ((std::fabs(x1-x2) > eps) && (itr > 0))
@@ -41,8 +47,11 @@ double TDetermineZeroPoint::SecantMethod(double (*f)(double), double x1, double 
 	return x0;
 }
 
-double TDetermineZeroPoint::NewtonRaphsonMethod(double (*f)(double), double (*df)(double), double x1, double eps, int itr)
+double TDetermineZeroPoint::NewtonRaphsonMethod(double (*f)(double x), double (*df)(double), double x1, double eps, unsigned int itr)
 {
+	// Check conditions
+	assert(eps > 0 && eps < 1);
+
 	double x0;
 
 	while ((std::fabs(f(x1)) > eps) && (itr > 0))
@@ -55,13 +64,14 @@ double TDetermineZeroPoint::NewtonRaphsonMethod(double (*f)(double), double (*df
 	return x0;
 }
 
-double TDetermineZeroPoint::FalsiMethod(double (*f)(double), double x1, double x2, double eps, int itr)
+double TDetermineZeroPoint::FalsiMethod(double (*f)(double x), double x1, double x2, double eps, unsigned int itr)
 {
-	double x0;
+	// Check conditions
+	assert(x1 < x2);
+	assert(eps > 0 && eps < 1);
+	assert(f(x1)*f(x2) < 0);
 
-	if (!(f(x1)*f(x2) < 0)) {
-		return 0;
-	}
+	double x0;
 
 	while ((std::fabs(x1-x2) > eps) && (itr > 0))
 	{
