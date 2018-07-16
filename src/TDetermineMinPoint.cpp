@@ -1,6 +1,6 @@
 #include "TDetermineMinPoint.hpp"
 
-#include <math.h>
+#include <cmath>
 #include <cassert>
 
 double TDetermineMinPoint::DichotomyMethod(double (*f)(double x), double a, double b, double eps, unsigned int itr)

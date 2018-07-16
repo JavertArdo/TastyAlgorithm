@@ -1,6 +1,6 @@
 #include "TDetermineMaxPoint.hpp"
 
-#include <math.h>
+#include <cmath>
 #include <cassert>
 
 double TDetermineMaxPoint::DichotomyMethod(double (*f)(double x), double a, double b, double eps, unsigned int itr)

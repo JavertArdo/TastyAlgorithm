@@ -11,7 +11,6 @@ project (TastyAlgorithm)
 enable_language (CXX)
 
 set (SOURCE_FILES
-	src/main.cpp
 	src/TConstantValue.cpp
 	src/TDetermineMaxPoint.cpp
 	src/TDetermineMinPoint.cpp
@@ -24,6 +23,22 @@ set (SOURCE_FILES
 	src/TMatrix.cpp
 )
 
-add_executable (TastyAlgorithm ${SOURCE_FILES})
+set (SOURCE_TEST_FILES
+	test/TestTConstantValue.cpp
+	test/TestTDetermineMinPoint.cpp
+	test/TestTDetermineMaxPoint.cpp
+	test/TestTDetermineZeroPoint.cpp
+	test/TestTExtra.cpp
+	test/TestTFunction.cpp
+	test/TestTMatrix.cpp
+	test/TestTPolynomial.cpp
+	test/TestTSort.cpp
+)
+
+add_executable (TastyAlgorithm
+	${SOURCE_FILES}
+	${SOURCE_TEST_FILES}
+	test/Test.cpp
+)
 
 target_include_directories (TastyAlgorithm PUBLIC include)
