@@ -6,11 +6,13 @@
 
 void Test_TExtra_Factorial();
 void Test_TExtra_Fibonacci();
+void Test_TExtra_Power();
 
 void Run_TExtra_Tests()
 {
 	Test_TExtra_Factorial();
 	Test_TExtra_Fibonacci();
+	Test_TExtra_Power();
 }
 
 void Test_TExtra_Factorial()
@@ -21,4 +23,12 @@ void Test_TExtra_Factorial()
 void Test_TExtra_Fibonacci()
 {
 	assert(TExtra::Fibonacci(8) == 21);
+}
+
+void Test_TExtra_Power()
+{
+	assert(TExtra::Power(2, 0) == 1);
+	assert(TExtra::Power(2, 1) == 2);
+	assert(TExtra::Power(2, 2) == 4);
+	assert(TExtra::Power(2, 5) == 32);
 }

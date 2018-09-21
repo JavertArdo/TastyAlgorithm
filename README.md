@@ -24,7 +24,10 @@ Simple implementation of the most popular numerical methods
 ### Function
 * Derivative of function
 * Integral of function
+* Sinus
+* Cosinus
 
 ### Extra
 * Factorial
 * Fibonacci numbers
+* Power

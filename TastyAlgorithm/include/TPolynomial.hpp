@@ -4,7 +4,7 @@
 class TPolynomial
 {
 public:
-	static double Horner(double x, double* tab, unsigned int n);
+	static double Horner(double x, const double* tab, unsigned int n);
 };
 
 #endif

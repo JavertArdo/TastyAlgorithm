@@ -1,6 +1,6 @@
 #include "TDetermineZeroPoint.hpp"
 
-#include <math.h>
+#include <cmath>
 #include <cassert>
 
 double TDetermineZeroPoint::BisectionMethod(double (*f)(double x), double x1, double x2, double eps, unsigned int itr)

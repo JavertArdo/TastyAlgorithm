@@ -1,8 +1,6 @@
 #ifndef T_DETERMINE_ZERO_POINT_HPP
 #define T_DETERMINE_ZERO_POINT_HPP
 
-#include <math.h>
-
 class TDetermineZeroPoint
 {
 public:

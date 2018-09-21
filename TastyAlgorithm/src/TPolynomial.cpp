@@ -1,6 +1,6 @@
 #include "TPolynomial.hpp"
 
-double TPolynomial::Horner(double x, double* tab, unsigned int n)
+double TPolynomial::Horner(double x, const double* tab, unsigned int n)
 {
 	double sum = *tab;
 

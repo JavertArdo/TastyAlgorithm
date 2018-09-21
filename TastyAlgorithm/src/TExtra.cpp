@@ -35,3 +35,21 @@ int TExtra::Fibonacci(unsigned int n)
 
 	return sum;
 }
+
+double TExtra::Power(double x, unsigned int n)
+{
+	double sum = x;
+
+	if (n == 0) {
+		return 1;
+	} else if (n == 1) {
+		return x;
+	}
+
+	for (unsigned int i=2; i<=n; i++)
+	{
+		sum *= x;
+	}
+
+	return sum;
+}

@@ -1,9 +1,9 @@
 void Run_TConstantValue_Tests();
-void Run_TDetermineMinPoint_Tests();
-void Run_TDetermineMaxPoint_Tests();
+//void Run_TDetermineMinPoint_Tests();
+//void Run_TDetermineMaxPoint_Tests();
 void Run_TDetermineZeroPoint_Tests();
 void Run_TExtra_Tests();
 void Run_TFunction_Tests();
-void Run_TMatrix_Tests();
+//void Run_TMatrix_Tests();
 void Run_TPolynomial_Tests();
 void Run_TSort_Tests();
