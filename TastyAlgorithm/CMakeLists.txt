@@ -3,8 +3,10 @@ cmake_minimum_required (VERSION 3.11)
 project (TastyAlgorithmLibrary VERSION 0.1.0)
 
 add_library (${PROJECT_NAME}
-	src/TDetermineZeroPoint.cpp
 	src/TConstantValue.cpp
+	src/TDetermineMaxPoint.cpp
+	src/TDetermineMinPoint.cpp
+	src/TDetermineZeroPoint.cpp
 	src/TExtra.cpp
 	src/TFunction.cpp
 	src/TPolynomial.cpp

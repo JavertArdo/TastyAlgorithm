@@ -4,8 +4,10 @@ project (TastyAlgorithmTest)
 
 set (SOURCE_FILES
 	Test.cpp
-	TestTDetermineZeroPoint.cpp
 	TestTConstantValue.cpp
+	TestTDetermineMaxPoint.cpp
+	TestTDetermineMinPoint.cpp
+	TestTDetermineZeroPoint.cpp
 	TestTExtra.cpp
 	TestTFunction.cpp
 	TestTPolynomial.cpp
