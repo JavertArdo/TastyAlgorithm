@@ -31,3 +31,4 @@ Simple implementation of the most popular numerical methods
 * Factorial
 * Fibonacci numbers
 * Power
+* Exponential

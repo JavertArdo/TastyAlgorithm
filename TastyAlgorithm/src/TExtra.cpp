@@ -1,5 +1,7 @@
 #include "TExtra.hpp"
 
+#include "TConstantValue.hpp"
+
 int TExtra::Factorial(unsigned int n)
 {
 	int sum = 1;
@@ -52,4 +54,9 @@ double TExtra::Power(double x, unsigned int n)
 	}
 
 	return sum;
+}
+
+double TExtra::Exponential(unsigned int n)
+{
+	return TExtra::Power(TConstantValue::e(), n);
 }
